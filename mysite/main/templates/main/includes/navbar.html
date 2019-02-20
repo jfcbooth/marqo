@@ -1,0 +1,62 @@
+{% block content %}
+<div id="sidebar" class="sticky-top" style="background-color:#fff;top:75px;">
+	<ul class="nav flex-column">
+	  <li class="nav-item">
+	    <a class="nav-link active js-scroll-trigger" href="{% url 'index' %}#page-top">Home</a>
+	  </li>
+	  <li class="nav-item dropdown">
+	    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Vacancies</a>
+	    <div class="dropdown-menu">
+	{% for item in Earl48 %}
+		{% if 'Yes' in item.is_available %}
+			      <a class="dropdown-item" href="{% url 'earl48' %}#{{ item.apartment_number }}">48 S Earl St | Apt. #{{item.apartment_number}}</a>
+		{% endif %}
+	{% endfor %}
+	{% for item in Earl46 %}
+		{% if 'Yes' in item.is_available %}
+			      <a class="dropdown-item" href="{% url 'earl46' %}#{{ item.apartment_number }}">46 S Earl St | Apt. #{{item.apartment_number}}</a>
+		{% endif %}
+	{% endfor %}
+	{% for item in Earl44 %}
+		{% if 'Yes' in item.is_available %}
+			      <a class="dropdown-item" href="{% url 'earl44' %}#{{ item.apartment_number }}">44 S Earl St | Apt. #{{item.apartment_number}}</a>
+		{% endif %}
+	{% endfor %}
+	{% for item in Orange229 %}
+		{% if 'Yes' in item.is_available %}
+			      <a class="dropdown-item" href="{% url 'orange229' %}#{{ item.apartment_number }}">229 Orange St | Apt. #{{item.apartment_number}}</a>
+		{% endif %}
+	{% endfor %}
+	{% for item in Burd328 %}
+		{% if 'Yes' in item.is_available %}
+			      <a class="dropdown-item" href="{% url 'burd326' %}#{{ item.apartment_number }}">328 E Burd St | Apt. #{{item.apartment_number}}</a>
+		{% endif %}
+	{% endfor %}
+	{% for item in Burd326 %}
+		{% if 'Yes' in item.is_available %}
+			      <a class="dropdown-item" href="{% url 'burd328' %}#{{ item.apartment_number }}">326 E Burd St | Apt. #{{item.apartment_number}}</a>
+		{% endif %}
+	{% endfor %}
+
+	    </div>
+	  </li>
+	  <li class="nav-item dropdown">
+	    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">All Apartments</a>
+	    <div class="dropdown-menu">
+	      <a class="dropdown-item" href="{% url 'burd326' %}">326 East Burd St</a>
+	      <a class="dropdown-item" href="{% url 'burd328' %}">328 East Burd St</a>
+	      <a class="dropdown-item" href="{% url 'orange229' %}">229 Orange St</a>
+	      <a class="dropdown-item" href="{% url 'earl44' %}">44 South Earl St</a>
+	      <a class="dropdown-item" href="{% url 'earl46' %}">46 South Earl St</a>
+	      <a class="dropdown-item" href="{% url 'earl48' %}">48 South Earl St</a>
+	    </div>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link active js-scroll-trigger" href="{% url 'index' %}#rentalDocs">Rental Docs</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link active js-scroll-trigger" href="{% url 'index' %}#contact">Contact</a>
+	  </li>
+	</ul>
+</div>
+{% endblock %}

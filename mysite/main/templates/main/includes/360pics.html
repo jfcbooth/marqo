@@ -1,0 +1,112 @@
+{% block content %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/360.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'vendor/reset.min.css' %}">
+
+<div class="multiple-scenes view-control-buttons">
+
+  <div id="pano"></div>
+
+  <div id="sceneList">
+    <ul class="scenes">
+      
+        <a href="#" class="scene" data-id="0-kitchen">
+          <li class="text">Kitchen</li>
+        </a>
+      
+        <a href="#" class="scene" data-id="1-balcony-1">
+          <li class="text">Balcony 1</li>
+        </a>
+      
+        <a href="#" class="scene" data-id="2-living-room">
+          <li class="text">Living Room</li>
+        </a>
+      
+        <a href="#" class="scene" data-id="3-upstairs-1">
+          <li class="text">Upstairs 1</li>
+        </a>
+      
+        <a href="#" class="scene" data-id="4-bedroom-1">
+          <li class="text">Bedroom 1</li>
+        </a>
+      
+        <a href="#" class="scene" data-id="5-bedroom-2">
+          <li class="text">Bedroom 2</li>
+        </a>
+      
+        <a href="#" class="scene" data-id="6-upstairs-2">
+          <li class="text">Upstairs 2</li>
+        </a>
+      
+        <a href="#" class="scene" data-id="7-bedroom-3">
+          <li class="text">Bedroom 3</li>
+        </a>
+      
+        <a href="#" class="scene" data-id="8-bedroom-4">
+          <li class="text">Bedroom 4</li>
+        </a>
+      
+        <a href="#" class="scene" data-id="9-bathroom">
+          <li class="text">Bathroom</li>
+        </a>
+      
+        <a href="#" class="scene" data-id="10-balcony-2">
+          <li class="text">Balcony 2</li>
+        </a>
+      
+        <a href="#" class="scene" data-id="11-outside">
+          <li class="text">Outside</li>
+        </a>
+      
+    </ul>
+  </div>
+
+  <div id="titleBar">
+    <h1 class="sceneName"></h1>
+  </div>
+
+  <a href="#" id="autorotateToggle">
+    <img class="icon off" src="/static/images/play.png">
+    <img class="icon on" src="/static/images/pause.png">
+  </a>
+
+  <a href="#" id="fullscreenToggle">
+    <img class="icon off" src="/static/images/fullscreen.png">
+    <img class="icon on" src="/static/images/windowed.png">
+  </a>
+
+  <a href="#" id="sceneListToggle">
+    <img class="icon off" src="/static/images/expand.png">
+    <img class="icon on" src="/static/images/collapse.png">
+  </a>
+
+  <a href="#" id="viewUp" class="viewControlButton viewControlButton-1">
+    <img class="icon" src="/static/images/up.png">
+  </a>
+  <a href="#" id="viewDown" class="viewControlButton viewControlButton-2">
+    <img class="icon" src="/static/images/down.png">
+  </a>
+  <a href="#" id="viewLeft" class="viewControlButton viewControlButton-3">
+    <img class="icon" src="/static/images/left.png">
+  </a>
+  <a href="#" id="viewRight" class="viewControlButton viewControlButton-4">
+    <img class="icon" src="/static/images/right.png">
+  </a>
+  <a href="#" id="viewIn" class="viewControlButton viewControlButton-5">
+    <img class="icon" src="/static/images/plus.png">
+  </a>
+  <a href="#" id="viewOut" class="viewControlButton viewControlButton-6">
+    <img class="icon" src="/static/images/minus.png">
+  </a>
+  <script src="{% static 'vendor/es5-shim.js' %}"></script>
+  <script src="{% static 'js/eventShim.js' %}"></script>
+  <script src="{% static 'js/classList.js' %}"></script>
+  <script src="{% static 'js/requestAnimationFrame.js' %}"></script>
+  <script src="{% static 'js/screenfull.min.js' %}"></script>
+  <script src="{% static 'js/bowser.min.js' %}"></script>
+  <script src="{% static 'js/marzipano.js' %}"></script>
+
+  <script src="{% static 'js/360.js' %}"></script>
+  <script src="{% static 'js/360data.js' %}"></script>
+</div>
+{% endblock %}

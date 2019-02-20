@@ -1,0 +1,13 @@
+{% for item in Earl48 %}
+	{% if 'Yes' in item.is_available %}
+    	<div class="card" style="width: 18rem;">
+    		    {% load staticfiles %}
+			<img class="card-img-top" src="/static/images/48_S_Earl.JPG" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title">{{ item.apartment_number }}</h5>
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				<a href="#" class="btn btn-primary">Go somewhere</a>
+			</div>
+		</div>
+    {% endif %}
+{% endfor %}

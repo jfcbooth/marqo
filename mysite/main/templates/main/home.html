@@ -1,0 +1,106 @@
+{% extends "main/header.html" %}
+{% load staticfiles%}
+{% block content %}
+<style>
+.padding{
+	margin-left:15px;
+	margin-right:15px;
+}
+
+.set-width{
+	width:250px;
+}
+
+.set-width-wide{
+	width:350px;
+
+}
+
+.show-mobile{
+	display: none;
+}
+
+@media (max-width: 768px) {
+  .show-mobile {
+    display: block; 
+    justify-content: center;
+  }
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -85px;
+    visibility: hidden;
+}
+
+</style>
+
+<div class="padding">
+<div id="page-top" class="container-fluid apartment-background">
+	<div class="row">
+		<div class="col">
+			<div class="mission-statement">
+		      <p><b>Thank you for your interest in my apartments.  Looking for a new place to live can be an exciting adventure, but the search can also be stressful.  I hope you will find this website informative and helpful in your quest.<br /><br />
+		          Obviously choosing your new home is an important decision.  I believe a landlord can be a significant factor, for they are ultimately responsible for taking care of your apartment. I have been a landlord for over 30 years and enjoy welcoming people to Shippensburg.  I take pride in providing quality service to renters by responding quickly to problems and taking care of their concerns.<br /><br />
+		          I wish you success in your search for an apartment and if you find one on my website that you are interested in renting, please give me a call to schedule an appointment for a walk through of the apartment.</b></p>
+		  </div>
+  		</div>
+  	</div>
+</div>
+<br />
+<div id="vacancies" class="bg-white">
+	<h2>Vacancies</h2>
+	<div class="container-fluid">
+		<div class="row bg-white justify-content-center">
+      			{% include "main/includes/createCards.html" %}
+		</div>
+	</div>
+</div>
+<br />
+<div class="container-fluid">
+	<div class="row">
+		<div class="col mb-4">
+			<a class="anchor" id="allApartments"></a>
+			<div class="set-width">
+			<h2>All Apartments</h2>
+			<div class="links">
+				<a href="{% url 'burd326' %}">326 East Burd St</a><br />
+				<a href="{% url 'burd328' %}">328 East Burd St</a><br />
+				<a href="{% url 'orange229' %}">229 Orange St</a><br />
+				<a href="{% url 'earl44' %}">44 South Earl St</a><br />
+				<a href="{% url 'earl46' %}">46 South Earl St</a><br />
+				<a href="{% url 'earl48' %}">48 South Earl St</a>
+			</div>
+		</div>
+		</div>
+		<div class="col mb-4">
+			<a class="anchor" id="rentalDocs"></a>
+			<div class="set-width-wide">
+			<h2>Rental Documents</h2>
+			<div class="links">
+				<a href="{% static 'documents/sample_lease.doc' %}">Sample Lease</a><br />
+				<a href="{% static 'documents/Apartment_Inspection_Form.xls' %}">Apartment Inspection Form</a>
+			</div>
+		</div>
+		</div>
+		<div class="col mb-4">
+			<a class="anchor" id="contact"></a>
+			<div class="set-width">
+			<div>
+				<h2>Contact</h2>
+				<p class="lead tab-in">Mark Booth<br />
+				326 East Burd St<br />
+				Shippensburg, PA 17257<br /><br />
+				(717) 530-1924<br />
+				<a href="mailto:markbooth@email.com">markbooth@email.com</a>
+				</p>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+	<iframe class='show-mobile' src="https://www.google.com/maps/d/u/1/embed?mid=1-DDx50X-h-nw_JZBjlRM0hi9o12bfnkp" style="width:100%;height:400px;"></iframe>
+</div>
+<br />
+{% endblock %}
