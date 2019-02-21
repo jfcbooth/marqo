@@ -4,28 +4,34 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Booth Apartments">
+    <meta name="description" content="Marqo">
     <meta name="author" content="Josh Booth">
 
+    {% load staticfiles %}
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-    {% load staticfiles %}
-    <!-- BoothApartments specific classes -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
-
     <!-- Custom styles for this template -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/scrolling-nav.css' %}">
 
-  </head>
-  	<title>Booth Apartments</title>
-  </head>
-   <body id="page-top" style="background-color:#f6f6f6">
+    <!-- Marqo specific classes -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
+
+
+  </head>
+  	<title>Marqo</title>
+  </head>
+
+  <body id="page-top">
     <!-- Navigation Bar At Top-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg header-background fixed-top" id="mainNav">
       <div class="container fill">
-        <a class="navbar-brand js-scroll-trigger" href="{% url 'index' %}#page-top">BoothApartments.com | <span class="small-text">Site in progress. Adding apt. pics soon.<span></a>
+        <a class="navbar-brand js-scroll-trigger" href="{% url 'index' %}#page-top">
+          <img class="logo" src="{% static 'images/favicon.png' %}" alt="Marqo">
+        </a>
+        <!-- Button to activate after the website passes width breakpoint-->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -33,35 +39,29 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="{% url 'index' %}#page-top">Home</a>
+              <a class="nav-link navbar-text js-scroll-trigger" href="{% url 'index' %}#top">Welcome</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="{% url 'index' %}#vacancies">Vacancies</a>
+              <a class="nav-link navbar-text js-scroll-trigger" href="{% url 'index' %}#howItWorks">How It Works</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="{% url 'index' %}#allApartments">All Apartments</a>
+              <a class="nav-link navbar-text js-scroll-trigger" href="{% url 'index' %}#team">Meet the Team</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="{% url 'index' %}#rentalDocs">Rental Docs</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="{% url 'index' %}#contact">Contact</a>
+              <a class="nav-link navbar-text js-scroll-trigger" href="{% url 'index' %}#contact">Contact</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
+    <!-- Offsets the page the height of the header -->
     <div class="spacer">
     </div>
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col my-sidebar" style="margin-top: 20px;">
-   	<!-- Side navigation -->
-    {% include "main/includes/left-margin.html" %}
-    </div>
-    <div class="col pl-0 pr-0 bg-white">
+    <div class="col body-background remove-gutter">
     	{% block content %}
     	{% endblock %}
     </div>
@@ -69,9 +69,9 @@
 </div>
 
     <!-- Footer -->
-    <footer class="py-5 bg-dark">
+    <footer class="py-5 header-background">
       <div class="container">
-        <p class="m-0 text-center text-white">BoothApartments.com 2019</p>
+        <p class="m-0 text-center text-white">Marqo Inc. 2019</p>
       </div>
       <!-- /.container -->
     </footer>
