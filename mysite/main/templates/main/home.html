@@ -2,14 +2,35 @@
 {% load staticfiles%}
 {% block content %}
 
-	<div id="top" class="container-fluid page-1">
-		<div class="row justify-content-md-center">
-				<div class="image-offset"></div>
-				<img src="{% static 'images/logo.png' %}" alt="Marqo">
-	  </div>
-	</div>
-	<br />
-		<div id="howItWorks">
-			<h2>How It Works</h2>
+<div id="top" class="container-fluid page-1">
+	<div class="row justify-content-center align-self-center text-center">
+		<div class="col">
+			<img class="vert-offset main-logo" src="{% static 'images/logo.png' %}" alt="Marqo">
+			<div class="spacer2">
+				<p class="center"><b>Get Early Access</b></p>
+				<form>
+				  <div class="form-width">
+				    <input type="text" class="form-control" placeholder="First name">
+				  </div>
+				  <div class="form-width">
+				    <input type="text" class="form-control" placeholder="Last name">
+				  </div>
+			    <div class="form-width">
+			    	<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+			   	</div>
+			   	<div>
+				    	<button type="submit" class="btn btn-primary input-button">Submit</button>
+				  </div>
+				</form>
+			</div>
 		</div>
+	</div>
+	<a class="nav-link navbar-text js-scroll-trigger" href="{% url 'index' %}#howItWorks">
+	<img class="downArrow" src="{% static 'images/downArrow.png' %}" alt="Next Page">
+	</a>
+</div>
+<br />
+<div id="howItWorks">
+	<h2>How It Works</h2>
+</div>
 {% endblock %}

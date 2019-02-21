@@ -1,3 +1,7 @@
+body {
+    font-family: Ubuntu, "times new roman", times, roman, serif;
+}
+
 .remove-space{
   width: 100%;
 }
@@ -11,11 +15,11 @@
 }
 
 .navbar-text{
-  color: #ff5757;
+  color: #fff;
 }
 
 .navbar-text:hover{
-  color: #b73e3e;
+  color: #ff5757;
 }
 .logo{
 r  height: 25px;
@@ -43,7 +47,7 @@ r  height: 25px;
 .page-1 {
     width: 100vw;
     height: 100vh; 
-    background: green;
+    background: #ff5757;
     background-size: cover;
 }
 
@@ -51,6 +55,58 @@ r  height: 25px;
   margin-left:-30px;
 }
 
-.image-offset{
-  padding-top: 300px;
+.vert-offset{
+  margin-top: 65px;
+}
+
+.main-logo{
+  height: 451px;
+  width: 630px;
+}
+
+@media (max-width: 768px) {
+  .main-logo {
+    height: 214px;
+    width: 300px; 
+  }
+  .form-width{
+    margin: auto;
+    width: 90%;
+    margin-bottom: 10px;
+  }
+}
+
+
+.spacer2{
+  margin-top:30px;
+}
+
+.input-button{
+  width: 350px;
+}
+
+.padding{
+  height:10px;
+}
+
+.center{
+  text-align: center;
+  color: #fff;
+  font-size: 32px;
+}
+
+.downArrow{
+  height: 45px;
+  width: 45px;
+  text-align: center;  
+}
+
+.form-width{
+  width: 350px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.form-width2{
+  width: 510px;
 }
