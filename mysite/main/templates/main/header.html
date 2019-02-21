@@ -9,47 +9,42 @@
 
     {% load staticfiles %}
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <!-- Custom styles for this template -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/scrolling-nav.css' %}">
-
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
     <!-- Marqo specific classes -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
-
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
-
     <!-- get ubuntu font -->
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
-  </head>
+    <link rel="stylesheet" type="text/css"
+      href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
   	<title>Marqo</title>
   </head>
 
   <body id="page-top">
     <!-- Navigation Bar At Top-->
-    <nav class="navbar navbar-expand-lg header-background fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-dark header-background fixed-top">
       <div class="container fill">
-        <a class="navbar-brand js-scroll-trigger" href="{% url 'index' %}#page-top">
-          <img class="logo" src="{% static 'images/favicon.png' %}" alt="Marqo">
+        <a class="navbar-brand js-scroll-trigger navbar-logo-position" href="{% url 'index' %}#page-top">
+          <img class="navbar-logo" src="{% static 'images/favicon.png' %}" alt="Marqo">
         </a>
         <!-- Button to activate after the website passes width breakpoint-->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <!-- js triggers change in color of Navigation item as page as scrolled -->
-        <div class="collapse navbar-collapse" id="navbarResponsive">
+        <div class="collapse navbar-collapse shrink-padding" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link navbar-text js-scroll-trigger" href="{% url 'index' %}#top">Welcome</a>
+              <a class="nav-link js-scroll-trigger" href="#top">Welcome</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link navbar-text js-scroll-trigger" href="{% url 'index' %}#howItWorks">How It Works</a>
+              <a class="nav-link js-scroll-trigger" href="#howItWorks">How It Works</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link navbar-text js-scroll-trigger" href="{% url 'index' %}#team">Meet the Team</a>
+              <a class="nav-link js-scroll-trigger" href="{% url 'index' %}#team">Meet the Team</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link navbar-text js-scroll-trigger" href="{% url 'index' %}#contact">Contact</a>
+              <a class="nav-link js-scroll-trigger" href="{% url 'index' %}#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -57,12 +52,12 @@
     </nav>
 
     <!-- Offsets the page the height of the header -->
-    <div class="spacer">
+    <div class="navbar-offsetter">
     </div>
 
-<div class="container-fluid">
+<div class="container-fluid data-spy="scroll" data-target=".navbar"">
   <div class="row">
-    <div class="col body-background remove-gutter">
+    <div class="col body-background remove-left-gutter">
     	{% block content %}
     	{% endblock %}
     </div>
@@ -79,8 +74,8 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
     <!-- Bootstrap core JavaScript -->

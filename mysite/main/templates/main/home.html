@@ -5,9 +5,9 @@
 <div id="top" class="container-fluid page-1">
 	<div class="row justify-content-center align-self-center text-center">
 		<div class="col">
-			<img class="vert-offset main-logo" src="{% static 'images/logo.png' %}" alt="Marqo">
-			<div class="spacer2">
-				<p class="center"><b>Get Early Access</b></p>
+			<img class="main-logo" src="{% static 'images/logo.png' %}" alt="Marqo">
+			<div class="form-spacer">
+				<p class="early-access"><b>Get Early Access</b></p>
 				<form>
 				  <div class="form-width">
 				    <input type="text" class="form-control" placeholder="First name">
@@ -23,14 +23,20 @@
 				  </div>
 				</form>
 			</div>
+			<a class="down-arrow-position text-center nav-link navbar-text js-scroll-trigger" href="{% url 'index' %}#howItWorks">
+				<img class="down-arrow" src="{% static 'images/downArrow.png' %}" alt="Next Page">
+			</a>
 		</div>
 	</div>
-	<a class="nav-link navbar-text js-scroll-trigger" href="{% url 'index' %}#howItWorks">
-	<img class="downArrow" src="{% static 'images/downArrow.png' %}" alt="Next Page">
-	</a>
 </div>
-<br />
-<div id="howItWorks">
-	<h2>How It Works</h2>
+<div id="howItWorks" class="container-fluid page-2">
+	<div class="row justify-content-center align-self-center text-center">
+		<div class="col">
+			<br />
+			<br />
+			<br />
+			<h2 clas="text-center">How It Works Content</h2>
+		</div>
+	</div>
 </div>
 {% endblock %}

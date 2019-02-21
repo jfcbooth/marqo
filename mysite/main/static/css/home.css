@@ -1,49 +1,36 @@
-body {
+/* Applies to entire doc */
+* {
     font-family: Ubuntu, "times new roman", times, roman, serif;
 }
 
-.remove-space{
-  width: 100%;
-}
 
+/* Grey header color */
 .header-background{
-  background-color:#717273 !important;
+  background-color:#717273;
 }
 
+/* Salmon body color */
 .body-background{
   background-color:#ff5757;
 }
 
-.navbar-text{
-  color: #fff;
+.navbar-logo{
+  height: 35px;
+  width: 35px;
 }
 
-.navbar-text:hover{
-  color: #ff5757;
-}
-.logo{
-r  height: 25px;
-  width: 25px;
+.shrink-padding{
+  padding-top: 0px;
 }
 
-
-.tab-in{
-  margin-left:1em;
-}
-
-.anchor {
-    display: block;
-    position: relative;
-    top: -85px;
-    visibility: hidden;
-}
-
-.spacer{
+/* Offsets the page the height of the navbar */
+.navbar-offsetter{
   background-color: darkgrey;
   width: 100%;
   height: 55px;
 }
 
+/* Fills page with salmon */
 .page-1 {
     width: 100vw;
     height: 100vh; 
@@ -51,19 +38,26 @@ r  height: 25px;
     background-size: cover;
 }
 
-.remove-gutter{
+.page-2 {
+    width: 100vw;
+    height: 100vh; 
+    background: #89cff0;
+    background-size: cover;
+}
+
+/* Removes left gutter */
+.remove-left-gutter{
   margin-left:-30px;
 }
 
-.vert-offset{
-  margin-top: 65px;
-}
-
+/* Specifies offset and height for main logo */
 .main-logo{
+  margin-top: 65px;
   height: 451px;
   width: 630px;
 }
 
+/* Adjusts size of logo and forms after breakpoint */
 @media (max-width: 768px) {
   .main-logo {
     height: 214px;
@@ -76,29 +70,29 @@ r  height: 25px;
   }
 }
 
-
-.spacer2{
+/* Spacer between logo and forms */
+.form-spacer{
   margin-top:30px;
 }
+
 
 .input-button{
   width: 350px;
 }
 
-.padding{
-  height:10px;
-}
-
-.center{
+.early-access{
   text-align: center;
   color: #fff;
   font-size: 32px;
 }
 
-.downArrow{
+.down-arrow{
   height: 45px;
   width: 45px;
-  text-align: center;  
+}
+
+.down-arrow-position{
+  margin-top: 10vh;
 }
 
 .form-width{
@@ -107,6 +101,19 @@ r  height: 25px;
   margin-bottom: 10px;
 }
 
-.form-width2{
-  width: 510px;
+
+
+/* Scrolling-nav css */
+header {
+  padding: 154px 0 100px;
+}
+
+@media (min-width: 992px) {
+  header {
+    padding: 156px 0 100px;
+  }
+}
+
+section {
+  padding: 150px 0;
 }
