@@ -1,6 +1,9 @@
 {% extends "main/header.html" %}
 {% load staticfiles%}
 {% block content %}
+<a class="down-arrow-position text-center nav-link navbar-text js-scroll-trigger" href="{% url 'index' %}#howItWorks">
+	<img class="down-arrow" src="{% static 'images/downArrow.png' %}" alt="Next Page">
+</a>
 <div id="top" class="container-fluid page-1">
 	<div class="row justify-content-center align-self-center text-center">
 		<div class="col">
@@ -22,9 +25,6 @@
 				  </div>
 				</form>
 			</div>
-			<a class="down-arrow-position text-center nav-link navbar-text js-scroll-trigger" href="{% url 'index' %}#howItWorks">
-				<img class="down-arrow" src="{% static 'images/downArrow.png' %}" alt="Next Page">
-			</a>
 		</div>
 	</div>
 </div>

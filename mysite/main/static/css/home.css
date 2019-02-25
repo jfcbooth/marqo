@@ -3,7 +3,6 @@
     font-family: Ubuntu, "times new roman", times, roman, serif;
 }
 
-
 /* Grey header color */
 .header-background{
   background-color:#717273;
@@ -15,12 +14,8 @@
 }
 
 .navbar-logo{
-  height: 35px;
-  width: 35px;
-}
-
-.shrink-padding{
-  padding-top: 0px;
+  height: 25px;
+  width: 25px;
 }
 
 /* Offsets the page the height of the navbar */
@@ -52,12 +47,29 @@
 
 /* Specifies offset and height for main logo */
 .main-logo{
-  margin-top: 65px;
-  height: 451px;
-  width: 630px;
+  margin-top: 3vh;
+  height: 30vh;
+  width: 45vh;
 }
 
-/* Adjusts size of logo and forms after breakpoint */
+
+.down-arrow-position{
+  position: absolute;
+  margin-top: 85vh;
+  margin-left: 49%;
+}
+
+.form-width{
+  width: 350px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.input-button{
+  width: 350px;
+}
+
+/* Adjusts size of logo, forms, and down-arrow after breakpoint */
 @media (max-width: 768px) {
   .main-logo {
     height: 214px;
@@ -65,8 +77,16 @@
   }
   .form-width{
     margin: auto;
-    width: 90%;
+    width: 95%;
     margin-bottom: 10px;
+  }
+  .down-arrow-position{
+    margin-top: 550px;
+  }
+
+  .input-button{
+    margin: auto;
+    width: 95%;
   }
 }
 
@@ -76,9 +96,7 @@
 }
 
 
-.input-button{
-  width: 350px;
-}
+
 
 .early-access{
   text-align: center;
@@ -87,20 +105,9 @@
 }
 
 .down-arrow{
-  height: 45px;
-  width: 45px;
+  height: 3vh;
+  width: 3vh;
 }
-
-.down-arrow-position{
-  margin-top: 10vh;
-}
-
-.form-width{
-  width: 350px;
-  margin: auto;
-  margin-bottom: 10px;
-}
-
 
 
 /* Scrolling-nav css */
