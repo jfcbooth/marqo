@@ -14,18 +14,15 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
-    <!-- get ubuntu font -->
-    <link rel="stylesheet" type="text/css"
-      href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+
   	<title>Marqo</title>
   </head>
 
-  <body id="page-top">
     <!-- Navigation Bar At Top-->
-    <nav class="navbar navbar-expand-lg navbar-dark header-background fixed-top">
-      <div class="container fill">
-        <a class="navbar-brand js-scroll-trigger navbar-logo-position" href="{% url 'index' %}#page-top">
-          <img class="navbar-logo" src="{% static 'images/favicon.png' %}" alt="Marqo">
+    <nav id="main-nav" class="navbar navbar-expand-lg navbar-dark fixed-top header-background">
+      <div class="container-fluid">
+        <a class="navbar-brand js-scroll-trigger navbar-logo-position" href="#top">
+          <img class="navbar-logo" src="{% static 'images/logo_cropped.png' %}" alt="Marqo">
         </a>
         <!-- Button to activate after the website passes width breakpoint-->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,43 +30,39 @@
         </button>
         <!-- js triggers change in color of Navigation item as page as scrolled -->
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
+          <ul class="nav nav-pills ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#top">Welcome</a>
+              <a class="nav-link js-scroll-trigger text-white" href="#top">Partners</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#howItWorks">How It Works</a>
+              <a class="nav-link js-scroll-trigger text-white" href="#howItWorks">How It Works</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="{% url 'index' %}#team">Meet the Team</a>
+              <a class="nav-link js-scroll-trigger text-white" href="#team">Winners</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="{% url 'index' %}#contact">Contact</a>
+              <a class="nav-link js-scroll-trigger text-white" href="#contact">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger text-white" href="#contact">Blog</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Offsets the page the height of the header -->
-    <div class="navbar-offsetter">
-    </div>
+  <body>
 
 <div class="container-fluid">
-  <div class="row">
-    <div class="col body-background remove-left-gutter">
     	{% block content %}
     	{% endblock %}
-    </div>
-  </div>
 </div>
 
     <!-- Footer -->
-    <footer class="py-5 header-background">
+    <footer class="py-4 header-background">
       <div class="container">
         <p class="m-0 text-center text-white">Marqo Inc. 2019</p>
       </div>
-      <!-- /.container -->
     </footer>
 
     <!-- Optional JavaScript -->

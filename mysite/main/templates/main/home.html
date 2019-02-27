@@ -1,14 +1,32 @@
 {% extends "main/header.html" %}
 {% load staticfiles%}
 {% block content %}
-<a class="down-arrow-position text-center nav-link navbar-text js-scroll-trigger" href="{% url 'index' %}#howItWorks">
-	<img class="down-arrow" src="{% static 'images/downArrow.png' %}" alt="Next Page">
+
+<header>
+  <div id="top" class="overlay"></div>
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+  </video>
+  <div class="container h-100 shift-up">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white">
+        <h1 class="display-1">Shop small,</br>Win big.</h1>
+      </div>
+    </div>
+<div class="learn-position">
+<a class="nav-link navbar-text js-scroll-trigger text-center" href="{% url 'index' %}#howItWorks">
+<p class="learn-more"><b>Learn more</b></p>
+<img class="down-arrow" src="{% static 'images/downArrow.png' %}" alt="Next Page">
 </a>
-<div id="top" class="container-fluid page-1">
-	<div class="row justify-content-center align-self-center text-center">
-		<div class="col">
+</div>
+  </div>
+</header>
+
+<div id="howItWorks" class="container-fluid page-2">
+<div class="justify-content-center align-self-center text-center">
+			<p class="form-spacer"></p>
 			<img class="main-logo" src="{% static 'images/logo.png' %}" alt="Marqo">
-			<div class="form-spacer">
+			<p class="form-spacer2"></p>
 				<p class="early-access"><b>Get Early Access</b></p>
 				<form>
 				  <div class="form-width">
@@ -24,18 +42,20 @@
 				    	<button type="submit" class="btn btn-primary input-button">Submit</button>
 				  </div>
 				</form>
-			</div>
+	</div>
+</div>
+<!--
+<div id="top" class="container-fluid page-1">
+	<div class="row justify-content-center align-self-center">
+		<div class="col center-screen">
+			<p class="tagline"><b>Shop small,</br> Win big.</b></p>
+			<a class="nav-link navbar-text js-scroll-trigger learn-margin" href="{% url 'index' %}#howItWorks">
+				<p class="learn-more"><b>Learn more</b></p>
+				<img class="down-arrow" src="{% static 'images/downArrow.png' %}" alt="Next Page">
+			</a>
 		</div>
 	</div>
 </div>
-<div id="howItWorks" class="container-fluid page-2">
-	<div class="row justify-content-center align-self-center text-center">
-		<div class="col">
-			<br />
-			<br />
-			<br />
-			<h2 clas="text-center">How It Works Content</h2>
-		</div>
-	</div>
-</div>
+
+-->
 {% endblock %}
