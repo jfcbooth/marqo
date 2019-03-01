@@ -9,6 +9,38 @@
     font-family: tcceb, Times, serif;
 }
 
+.nav-pills > li > a.active {
+    background-color: #fff !important;
+    color: #ff5757 !important;
+}
+
+body{
+  position: relative;
+}
+
+p{
+  font-size: 24px;
+}
+
+.heading{
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 56px;
+  color: #ff5757;
+}
+
+.step-number{
+  font-size: 84px;
+  color: #ff5757;
+
+}
+
+.step-title{
+  padding-left: 15px;
+  font-size: 48px;
+
+}
+
 ul.nav a:hover {
   background-color: #fff !important;
   color: #ff5757 !important;
@@ -111,6 +143,11 @@ header .overlay {
 }
 
 .page-2 {
+    height: 100vh; 
+    background-color: #fff;
+}
+
+.page-3 {
     height: 100vh; 
     background-color: #333333;
 }
