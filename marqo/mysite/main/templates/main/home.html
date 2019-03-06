@@ -1,0 +1,70 @@
+{% extends "main/header.html" %}
+{% load staticfiles%}
+{% block content %}
+
+<header>
+  <div id="top" class="overlay"></div>
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+  </video>
+  <div class="container h-100 shift-up">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white">
+        <h1 class="display-1">Shop small,</br>Win big.</h1>
+      </div>
+    </div>
+    <div class="learn-position">
+      <a class="nav-link navbar-text js-scroll-trigger text-center" href="{% url 'index' %}#howItWorks">
+        <p class="learn-more"><b>Learn more</b></p>
+        <img class="down-arrow" src="{% static 'images/downArrow.png' %}" alt="Next Page">
+      </a>
+    </div>
+  </div>
+</header>
+
+<div id="how-it-works" class="container-fluid page-2">
+  <p class="heading">How It Works</p>
+  <div class="explaination-container">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <span class="step-number">1</span><span class="step-title">Discover</span>
+          <p class="hiw">Find the hidden gems in your local communities by searching our database for partnered locations. Search by city, name, or zipcode to find the great local offerings. Sweet!</p>
+        </div>
+        <div class="col">
+          <span class="step-number">2</span><span class="step-title">Support</span>
+          <p class="hiw">Spend as little as $10 for the chance to win something extraordinary and join the Marqo community. Once you're in one of our partnered locations, simply find our poster and scan the QR code to check you in. Finally, snap a pic of your reciept and send it in to us through the app. Together, we can build stonger communities across the world.</p>
+        </div>
+        <div class="col">
+          <span class="step-number">3</span><span class="step-title">Win</span>
+          <p class="hiw">Your support to these small businesses make a difference for your amazing community, and that's an awesome thing to do (win!). One person is picked at random to win the prize specified (win!). The local business gets support from a brand new network of people, allowing them to continue their awsome craft (the biggest win of all!).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="winners" class="container-fluid page-3">
+  <div class="justify-content-center align-self-center text-center">
+    <p class="form-spacer"></p>
+    <img class="main-logo" src="{% static 'images/logo.png' %}" alt="Marqo">
+    <p class="form-spacer2"></p>
+    <p class="early-access"><b>Get Early Access</b></p>
+    <form>
+      <div class="form-width">
+        <input type="text" class="form-control" placeholder="First name">
+      </div>
+      <div class="form-width">
+        <input type="text" class="form-control" placeholder="Last name">
+      </div>
+      <div class="form-width">
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      </div>
+      <div>
+          <button type="submit" class="btn btn-primary input-button">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

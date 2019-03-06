@@ -1,0 +1,211 @@
+{% block content %}
+
+<style>
+.margin-b{
+	margin-bottom: 1rem;
+}
+
+.margin-card{
+	margin-right:30px;
+}
+
+.center-avail{
+	text-align: center;
+}
+</style>
+
+
+{% for item in Earl48 %}
+	{% if 'Yes' in item.is_available %}
+		<div class="margin-card justify-content-end margin-b">
+			<div class="card" style="width: 16rem;">
+				<img class="card-img-top" src="/static/images/48_S_Earl.JPG" alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title" style="text-align:center">48 S Earl St | Apt. #{{ item.apartment_number }}</h5>
+					<div class="container">
+						<div class="row">
+							<div class="col center-avail">
+								{% if current_date < item.next_date_available|date:"Ymd" %}
+									Available {{item.next_date_available|date:"M. Y"}}<br />
+								{% else %}
+									Available now<br />
+								{% endif %}
+							</div>
+						</div>
+						<div class="row no-gutters">
+							<div class="col">
+								<p class="card-text">
+									{{item.number_of_bedrooms}} bedroom<br />${{item.rent_per_month}}/month</p>
+							</div>
+							<div class="col align-self-center">
+								<a href="{% url 'earl48' %}#{{ item.apartment_number }}" class="btn btn-primary">More info</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	{% endif %}
+{% endfor %}
+
+{% for item in Earl46 %}
+	{% if 'Yes' in item.is_available %}
+		<div class="margin-card justify-content-end margin-b">
+			<div class="card" style="width: 16rem;">
+				<img class="card-img-top" src="/static/images/46_E_Earl_Front.JPG" alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title" style="text-align:center">46 S Earl St | Apt. #{{ item.apartment_number }}</h5>
+					<div class="container">
+						<div class="row">
+							<div class="col center-avail">
+								{% if current_date < item.next_date_available|date:"Ymd" %}
+									Available {{item.next_date_available|date:"M. Y"}}<br />
+								{% else %}
+									Available now<br />
+								{% endif %}
+							</div>
+						</div>
+						<div class="row no-gutters">
+							<div class="col">
+								<p class="card-text">{{item.number_of_bedrooms}} bedroom<br />${{item.rent_per_month}}/month</p>
+							</div>
+							<div class="col align-self-center">
+								<a href="{% url 'earl46' %}#{{ item.apartment_number }}" class="btn btn-primary">More info</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	{% endif %}
+{% endfor %}
+
+{% for item in Earl44 %}
+	{% if 'Yes' in item.is_available %}
+		<div class="margin-card justify-content-end margin-b">
+			<div class="card" style="width: 16rem;">
+				<img class="card-img-top" src="/static/images/44_S_Earl_Front.JPG" alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title" style="text-align:center">44 S Earl St | Apt. #{{ item.apartment_number }}</h5>
+					<div class="container">
+						<div class="row">
+							<div class="col center-avail">
+								{% if current_date < item.next_date_available|date:"Ymd" %}
+									Available {{item.next_date_available|date:"M. Y"}}<br />
+								{% else %}
+									Available now<br />
+								{% endif %}
+							</div>
+						</div>
+						<div class="row no-gutters">
+							<div class="col">
+								<p class="card-text">{{item.number_of_bedrooms}} bedroom<br />${{item.rent_per_month}}/month</p>
+							</div>
+							<div class="col align-self-center">
+								<a href="{% url 'earl44' %}#{{ item.apartment_number }}" class="btn btn-primary">More info</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	{% endif %}
+{% endfor %}
+
+{% for item in Orange229 %}
+	{% if 'Yes' in item.is_available %}
+		<div class="margin-card justify-content-end margin-b">
+			<div class="card" style="width: 16rem;">
+				<img class="card-img-top" src="/static/images/229_Orange_Front.JPG" alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title" style="text-align:center">229 Orange St | Apt. #{{ item.apartment_number }}</h5>
+					<div class="container">
+						<div class="row">
+							<div class="col center-avail">
+								{% if current_date < item.next_date_available|date:"Ymd" %}
+									Available {{item.next_date_available|date:"M. Y"}}<br />
+								{% else %}
+									Available now<br />
+								{% endif %}
+							</div>
+						</div>
+						<div class="row no-gutters">
+							<div class="col">
+								<p class="card-text">{{item.number_of_bedrooms}} bedroom<br />${{item.rent_per_month}}/month</p>
+							</div>
+							<div class="col align-self-center">
+								<a href="{% url 'orange229' %}#{{ item.apartment_number }}" class="btn btn-primary">More info</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	{% endif %}
+{% endfor %}
+
+{% for item in Burd326 %}
+	{% if 'Yes' in item.is_available %}
+		<div class="margin-card justify-content-end margin-b">
+			<div class="card" style="width: 16rem;">
+				<img class="card-img-top" src="/static/images/326_E_Burd_Front.jpg" alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title" style="text-align:center">326 E Burd St | Apt. #{{ item.apartment_number }}</h5>
+					<div class="container">
+						<div class="row">
+							<div class="col center-avail">
+								{% if current_date < item.next_date_available|date:"Ymd" %}
+									Available {{item.next_date_available|date:"M. Y"}}<br />
+								{% else %}
+									Available now<br />
+								{% endif %}
+							</div>
+						</div>
+						<div class="row no-gutters">
+							<div class="col">
+								<p class="card-text">{{item.number_of_bedrooms}} bedroom<br />${{item.rent_per_month}}/month</p>
+							</div>
+							<div class="col align-self-center">
+								<a href="{% url 'burd326' %}#{{ item.apartment_number }}" class="btn btn-primary">More info</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	{% endif %}
+{% endfor %}
+
+{% for item in Burd328 %}
+	{% if 'Yes' in item.is_available %}
+		<div class="margin-card justify-content-end margin-b">
+			<div class="card" style="width: 16rem;">
+				<img class="card-img-top" src="/static/images/328_E_Burd_Front.jpg" alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title" style="text-align:center">328 E Burd St | Apt. #{{ item.apartment_number }}</h5>
+					<div class="container">
+						<div class="row">
+							<div class="col center-avail">
+								{% if current_date < item.next_date_available|date:"Ymd" %}
+									Available {{item.next_date_available|date:"M. Y"}}<br />
+								{% else %}
+									Available now<br />
+								{% endif %}
+							</div>
+						</div>
+						<div class="row no-gutters">
+							<div class="col">
+								<p class="card-text">{{item.number_of_bedrooms}} bedroom<br />${{item.rent_per_month}}/month</p>
+							</div>
+							<div class="col align-self-center">
+								<a href="{% url 'burd328' %}#{{ item.apartment_number }}" class="btn btn-primary">More info</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	{% endif %}
+{% endfor %}
+
+{% endblock %}
