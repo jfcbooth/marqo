@@ -1,0 +1,101 @@
+{% extends "main/header.html" %}
+{% load staticfiles%}
+{% block content %}
+<div class="container-fluid">
+  <div class="t-header">
+    <p>Meet the Team</p>
+  </div> 
+  <div class="t-container">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-auto">
+          <img class="t-mugshot" src="{% static 'images/david.jpg' %}" alt="David">
+        </div>
+        <div class="col align-self-start">
+          <p class="t-name">
+          David Brantley
+          </p>
+          <p class="t-title">
+          Co-founder and CEO
+          </p>
+          <p class="t-desc">
+          David co-founded Marqo after realizing there was a need for an innovative loyalty service that locally ran businesses would benefit from. He brings to Marqo a solid background of professional customer retention experience after following his work with Volvo Construction Equipment, working in Telematics doing Sales Analytics. He holds a Bachelor’s of Science in Business Administration degree in Marketing and International Management from Shippensburg University of Pennsylvania. 
+          </p>
+        </div>
+      </div>
+      <div class="t-spacer"></div>
+      <div class="row">
+        <div class="col align-self-start">
+          <p class="t-name">
+          Alec Stimson
+          </p>
+          <p class="t-title">
+          Co-founder and SVP, Marketing
+          </p>
+          <p class="t-desc">
+          Alec has extensive Market Research and Branding experiencing having worked for Martins Brand House in South Australia. While working there, he specialized in local development research and various branding projects. Alec holds a Bachelor’s of Science in Business Administration degree in Marketing, while also being a part of the distinguished Wood Honors College of Shippensburg University of Pennsylvania.
+          </p>
+        </div>
+        <div class="col-md-auto">
+          <img class="t-mugshot" src="{% static 'images/david.jpg' %}" alt="David">
+        </div>
+      </div>
+      <div class="t-spacer"></div>
+      <div class="row">
+        <div class="col-md-auto">
+          <img class="t-mugshot" src="{% static 'images/patrick.jpg' %}" alt="Patrick">
+        </div>
+        <div class="col align-self-start">
+          <p class="t-name">
+          Patrick Lübben
+          </p>
+          <p class="t-title">
+          Co-founder and SVP, Strategy & Operations
+          </p>
+          <p class="t-desc">
+          Patrick Luebben is the rational and strategic thinker in the team. His international background and considerable adaptability to new environments brings valuable inputs to the team’s ideas and challenges. He has a background in Marketing Research and Consulting in which he worked on several Consumer and B2B qualitative and quantitative research projects. 
+          </p>
+        </div>
+      </div>
+      <div class="t-spacer"></div>
+      <div class="row">
+        <div class="col align-self-start">
+          <p class="t-name">
+          Josh Booth
+          </p>
+          <p class="t-title">
+          SVP, Technology & Web Development
+          </p>
+          <p class="t-desc">
+          Josh's extensive background in the technology field makes him a critical part of Marqo's agile development environment. Having worked for employers such as the Naval Reasearch Laboratory, Buchanan Trail Sporters, 
+          </p>
+        </div>
+       <div class="col-md-auto">
+          <img class="t-mugshot" src="{% static 'images/david.jpg' %}" alt="David">
+      </div>
+      </div>
+      <div class="t-spacer"></div>
+      <div class="row">
+        <div class="col-md-auto">
+          <img class="t-mugshot" src="{% static 'images/david.jpg' %}" alt="David">
+        </div>
+        <div class="col align-self-start">
+          <p class="t-name">
+          Yajaira Perez
+          </p>
+          <p class="t-title">
+          Media Manager, Photography & Videography
+          </p>
+          <p class="t-desc">
+          David co-founded Marqo after realizing there was a need for an innovative loyalty service that locally ran businesses would benefit from. He brings to Marqo a solid background of professional customer retention experience after following his work with Volvo Construction Equipment, working in Telematics doing Sales Analytics. He holds a Bachelor’s of Science in Business Administration degree in Marketing and International Management from Shippensburg University of Pennsylvania. 
+          </p>
+        </div>
+      </div>
+      <div class="t-spacer"></div>
+      <div class="text-center">
+      <a class="btn btn-primary t-btn" href="{% url 'index' %}" role="button"> Return to Home</a>
+    </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

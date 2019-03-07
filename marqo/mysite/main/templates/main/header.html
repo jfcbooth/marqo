@@ -21,7 +21,7 @@
     <!-- Navigation Bar At Top-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top header-background">
       <div class="container-fluid" id="myScrollSpy">
-        <a class="navbar-brand js-scroll-trigger" href="#top">
+        <a class="navbar-brand js-scroll-trigger" href="{% url 'index' %}#top">
           <img class="navbar-logo" src="{% static 'images/logo.png' %}" alt="Marqo">
         </a>
         <!-- Button to activate after the website passes width breakpoint-->
@@ -32,19 +32,19 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="nav nav-pills ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger text-white" href="#top">Partners</a>
+              <a class="nav-link js-scroll-trigger text-white" href="{% url 'index' %}#top">Partners</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger text-white" href="#how-it-works">How It Works</a>
+              <a class="nav-link js-scroll-trigger text-white" href="{% url 'index' %}#how-it-works">How It Works</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger text-white" href="#blog">Blog</a>
+              <a class="nav-link js-scroll-trigger text-white" href="{% url 'index' %}#blog">Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger text-white" href="#contact">About Us</a>
+              <a class="nav-link js-scroll-trigger text-white" href="{% url 'index' %}#about-us">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger text-white" href="#sign-in">Sign In</a>
+              <a class="nav-link js-scroll-trigger text-white" href="{% url 'index' %}#sign-in">Sign In</a>
             </li>
           </ul>
         </div>
