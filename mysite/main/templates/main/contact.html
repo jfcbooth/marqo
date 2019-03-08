@@ -1,0 +1,175 @@
+{% load staticfiles%}
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Marqo">
+    <meta name="author" content="Josh Booth">
+
+    {% load staticfiles %}
+    <!-- Bootstrap CSS -->
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
+
+    <title>Marqo</title>
+  </head>
+
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bgimg {
+  background-image: url('https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/2018/europeslostf.jpg');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  font-family: "Courier New", Courier, monospace !important;
+  font-size: 25px;
+}
+
+.font{
+    font-family: "Courier New", Courier, monospace !important;
+}
+
+.topleft {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  height: 300px;
+  width: 200px;
+
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.logo{
+  margin-top: 30px;
+  margin-left: 30px;
+  height: 100px;
+  width: 250px;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
+}
+
+@font-face {
+  font-family: tcceb;
+  src: url('/static/fonts/tcceb.ttf')  format("truetype"),
+       local('tcceb');
+}
+
+.button {
+    font-family: tcceb, Times, serif;
+
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #ff5757;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 300px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00ab';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+
+
+
+
+
+<body>
+
+<div class="bgimg">
+  <div class="topleft">
+<button class="button" style="vertical-align:middle" onclick="window.location.href='http://www.marqoapp.com'" value="Redirect"><span>Back to Marqo</span></button>  </div>
+  <div class="middle font">
+    <h1>CONTACT US COMING SOON</h1>
+    <hr>
+    <p id="demo" class="font" style="font-size:30px"></p>
+  </div>
+
+</div>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Mar 15, 2019 15:37:25").getTime();
+
+// Update the count down every 1 second
+var countdownfunction = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+  
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
+  
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(countdownfunction);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
+

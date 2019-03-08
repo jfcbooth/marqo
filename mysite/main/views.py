@@ -13,5 +13,8 @@ def team(request):
 def contact(request):
 	return render(request, 'main/contact.html')
 
+def comingSoon(request):
+	return render(request, 'main/coming-soon.html')
+
 def test(request):
 	return render(request, 'main/test.html')
