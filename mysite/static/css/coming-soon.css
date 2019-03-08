@@ -160,7 +160,7 @@ header .p-overlay {
 
 /* Sets height of page */
 .hiw-page {
-    height: auto; 
+    height: 100vh; 
     background-color: #fff;
 }
 
@@ -200,26 +200,6 @@ header .p-overlay {
  * Blog classes 
  * ####################################### */
 
-.blog-article{
-  height: 500px;
-  width: 400px;
-  border-radius: 25px;
-  background-color: grey;
-  margin-bottom: 25px;
-}
-
-.blog-article-text{
-  padding-top: 50%;
-  color: white;
-  font-size: 48px;
-}
-
-@media (max-width: 900px) {
-.blog-article{
-  height: 300px;
-  width: 250px;
-}
-}
 
 
 /* #######################################
@@ -319,8 +299,8 @@ header .p-overlay {
 /* Specifies offset and height for main logo */
 .l-logo{
   margin-top: 3vh;
-  height: 300px;
-  width: 650px;
+  height: 30vh;
+  width: 45vh;
 }
 
 /* Get Early Access text properties */
@@ -351,7 +331,7 @@ header .p-overlay {
   /* Specifies offset and height for main logo */
   .l-logo {
     height: 214px;
-    width: 400px; 
+    width: 300px; 
   }
 
   /* Width of input forms */
