@@ -1,6 +1,14 @@
 {% extends "main/header.html" %}
 {% load staticfiles%}
 {% block content %}
+
+<style>
+.t-mugshot-test{
+  height: 300px;
+  width: 250px;
+  border-radius: 45px;
+}
+</style>
 <div class="container-fluid">
   <div class="t-header">
     <p>Meet the Team</p>
@@ -37,7 +45,7 @@
           </p>
         </div>
         <div class="col-md-auto">
-          <img class="t-mugshot" src="{% static 'images/marqo_coming_soon.jpg' %}" alt="David">
+          <img class="t-mugshot-test" src="{% static 'images/marqo_alec.jpeg' %}" alt="Alec">
         </div>
       </div>
       <div class="t-spacer"></div>
@@ -71,13 +79,13 @@
           </p>
         </div>
        <div class="col-md-auto">
-          <img class="t-mugshot" src="{% static 'images/marqo_josh.jpg' %}" alt="David">
+          <img class="t-mugshot" src="{% static 'images/marqo_josh.jpg' %}" alt="Josh">
       </div>
       </div>
       <div class="t-spacer"></div>
       <div class="row">
         <div class="col-md-auto">
-          <img class="t-mugshot" src="{% static 'images/marqo_coming_soon.jpg' %}" alt="David">
+          <img class="t-mugshot" src="{% static 'images/marqo_yajaira.jpeg' %}" alt="Yajaira">
         </div>
         <div class="col align-self-start">
           <p class="t-name">
