@@ -1,4 +1,4 @@
-#!/var/www/marqo/venv/bin/python
+#!/srv/marqo/venv/bin/python
 
 import sys
 import getopt

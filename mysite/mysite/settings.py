@@ -25,7 +25,7 @@ SECRET_KEY = '(z!80)#dwh$4hv-!gqd&h_lk+t0e@rs8n6%hu)2r8b2!*=vvzt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['104.248.126.224', 'marqoapp.com', 'www.marqoapp.com', 'marqoinc.com', 'www.marqoinc.com', '127.0.0.1']
+ALLOWED_HOSTS = ['157.230.48.175', 'marqoapp.com', 'www.marqoapp.com', 'marqoinc.com', 'www.marqoinc.com', '127.0.0.1']
 
 
 # Application definition
