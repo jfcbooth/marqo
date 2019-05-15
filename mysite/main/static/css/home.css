@@ -332,14 +332,29 @@ header .p-overlay {
 
 /* Width of input forms */
 .l-form-width{
-  width: 350px;
+  width: 360px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.l-field{
+  width:99%;
+}
+
+.l-form-width-2{
+  width: 330px;
   margin: auto;
   margin-bottom: 10px;
 }
 
 /* Width of submit button */
 .l-submit{
-  width: 350px;
+  width: 100px;
+  height:35px;
+}
+
+.l-left{
+  margin-left:10px;
 }
 
 /* #######################################

@@ -28,8 +28,6 @@ DEBUG = True
 ALLOWED_HOSTS = ['157.230.48.175', 'marqoapp.com', 'www.marqoapp.com', 'marqoinc.com', 'www.marqoinc.com', '127.0.0.1']
 
 
-# Application definition
-
 INSTALLED_APPS = [
 	'main',
     'django.contrib.admin',
@@ -74,13 +72,25 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#        'NAME': 'emails',
+#        'USER': 'marqo',
+#        'PASSWORD': 'Marqo1',
+#        'HOST': 'localhost',
+#        'PORT': '',
+#    }
+#}
+
 
 
 # Password validation
@@ -115,6 +125,11 @@ USE_L10N = True
 
 USE_TZ = True
 
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_PORT = 587
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/

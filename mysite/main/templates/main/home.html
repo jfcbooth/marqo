@@ -11,10 +11,32 @@
     <div class="d-flex h-100 text-center align-items-center">
       <div class="w-100 text-white">
         <h1 class="display-1">Shop small,</br>Win big.</h1>
+
+
+        <form method="post">
+            {% csrf_token %}
+          <div class="l-form-width form-row">
+            <div class="col">
+            {{ form.first_name }}
+          </div>
+          <div class="col">
+            {{ form.last_name }}
+          </div>
+          </div>
+          <div class="row">
+            <div class="input-group l-form-width-2">
+              {{ form.email }}
+                <span class="">
+                <button type="submit" class="btn btn-primary l-left l-submit">Submit </button>
+              </span>
+            </div>
+          </div>
+        
+          </form>
       </div>
     </div>
     <div class="p-down-arrow-pos">
-      <a class="nav-link navbar-text js-scroll-trigger text-center" href="{% url 'index' %}#how-it-works">
+      <a class="nav-link navbar-text js-scroll-trigger text-center" href="{% url 'purpose' %}#how-it-works">
         <p class="p-learn-more"><b>Learn more</b></p>
         <img class="p-down-arrow" src="{% static 'images/downArrow.png' %}" alt="Next Page">
       </a>
@@ -45,8 +67,7 @@
 </div>
 <div class="t-spacer"></div>
 <div class="t-spacer"></div>
-
-
+<!--
 <div id="blog" class="container-fluid hiw-page">
   <p class="hiw-title">Blog - Coming soon</p>
   <div class="hiw-container">
@@ -72,7 +93,7 @@
   </div>
 </div>
 <div class="t-spacer"></div>
-
+-->
 
 <div id="about-us" class="container-fluid ab-page">
   <div class="ab-pic-container">
@@ -104,7 +125,7 @@
   </div>
 </div>
 
-
+<!--
 <div id="sign-in" class="container-fluid l-page">
   <div class="justify-content-center align-self-center text-center">
     <p class="l-top-spacer"></p>
@@ -127,4 +148,5 @@
     </form>
   </div>
 </div>
+-->
 {% endblock %}
