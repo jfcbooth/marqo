@@ -10,6 +10,7 @@
     {% load staticfiles %}
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+
     <!-- Marqo specific classes -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
     <!-- Favicon -->
@@ -22,6 +23,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top header-background">
       <div class="container-fluid" id="myScrollSpy">
         <a class="navbar-brand js-scroll-trigger" href="#top">
+          <!-- Logo at upper right -->
           <img class="navbar-logo" src="{% static 'images/logo.png' %}" alt="Marqo">
         </a>
         <!-- Button to activate after the website passes width breakpoint-->
@@ -32,7 +34,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="nav nav-pills ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger text-white" href="#top">Sign Up</a>
+              <a class="nav-link js-scroll-trigger text-white" href="#top">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger text-white" href="#how-it-works">How It Works</a>
@@ -60,6 +62,9 @@
     <!-- Footer -->
     <footer class="py-4 header-background">
       <div class="container">
+        <a class="btn btn-primary" href="{% url 'purpose' %}" role="button">Our Purpose</a>
+        <a class="btn btn-primary" href="{% url 'team' %}" role="button">Meet the Team</a>
+        <a class="btn btn-primary" href="{% url 'contact' %}" role="button">Contact Us</a>
         <p class="m-0 text-center text-white">Marqo Inc. 2019</p>
       </div>
     </footer>

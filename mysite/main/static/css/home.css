@@ -332,19 +332,29 @@ header .p-overlay {
 
 /* Width of input forms */
 .l-form-width{
-  width: 360px;
   margin: auto;
-  margin-bottom: 10px;
 }
 
 .l-field{
-  width:99%;
+  width:170px;
+  border-style: solid;
+  border-color: white;
+  background-color:white;
+  color: black;
+  border-radius:3px;
+}
+
+.l-field-2{
+  width:200px;
+  border-style: solid;
+  border-color: white;
+  background-color:white;
+  color: black;
+  border-radius:3px;
 }
 
 .l-form-width-2{
   width: 330px;
-  margin: auto;
-  margin-bottom: 10px;
 }
 
 /* Width of submit button */
@@ -454,4 +464,20 @@ header .p-overlay {
   font-size: 32px;
   width: 80%;
   margin: auto;
+}
+
+.sign-up-box{
+  margin: auto;
+  background: #444444;
+  width: 500px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.top-margin{
+  padding-top: 10px;
+}
+
+.names{
+
 }

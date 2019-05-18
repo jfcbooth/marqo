@@ -27,7 +27,7 @@ class HomeView(TemplateView):
 
       recipients = ['info@marqoapp.com']
 
-      send_mail(subject, message, sender, recipients)
+      #send_mail(subject, message, sender, recipients)
       return HttpResponseRedirect('/received/')
 
       # process the data in form.cleaned_data as required

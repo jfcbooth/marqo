@@ -13,13 +13,13 @@ class EmailForm(forms.ModelForm):
       attrs={
         'class': 'form-control',
         'class': 'l-field',
-        'placeholder': 'Last Nmae'
+        'placeholder': 'Last Name'
       }
     ))
     email = forms.CharField(max_length=32, widget=forms.TextInput(
       attrs={
         'class': 'form-control',
-        'class': 'email',
+        'class': 'l-field-2',
         'placeholder': 'Email'
       }
     ))

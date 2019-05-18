@@ -12,27 +12,30 @@
       <div class="w-100 text-white">
         <h1 class="display-1">Shop small,</br>Win big.</h1>
 
+        <div class="sign-up-box">
+          <h2 class="top-margin">Early Access</h2>
 
-        <form method="post">
+          <form method="post">
             {% csrf_token %}
-          <div class="l-form-width form-row">
-            <div class="col">
-            {{ form.first_name }}
-          </div>
-          <div class="col">
-            {{ form.last_name }}
-          </div>
-          </div>
-          <div class="row">
-            <div class="input-group l-form-width-2">
-              {{ form.email }}
-                <span class="">
-                <button type="submit" class="btn btn-primary l-left l-submit">Submit </button>
-              </span>
+            <div class="l-form-width form-row">
+              <div class="col">
+                {{ form.first_name }}
+              </div>
+              <div class="col">
+                {{ form.last_name }}
+              </div>
             </div>
-          </div>
-        
-          </form>
+            <div class="l-form-width form-row">
+              <div class="">
+                {{ form.email }}
+                  <span class="">
+                  <button type="submit" class="btn btn-primary l-submit">Submit </button>
+                </span>
+              </div>
+            </div>
+          
+            </form>
+        </div>
       </div>
     </div>
     <div class="p-down-arrow-pos">
