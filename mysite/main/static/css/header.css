@@ -1,0 +1,91 @@
+/* #######################################
+ * Entire doc attributes 
+ * ####################################### */
+@font-face {
+  font-family: tcceb;
+  src: url('/static/fonts/tcceb.ttf')  format("truetype"),
+       local('tcceb');
+}
+
+* {
+    font-family: tcceb, Times, serif;
+}
+
+body{
+  position: relative;
+}
+
+/* Scrolling-nav css */
+header {
+  padding: 154px 0 100px;
+}
+
+@media (min-width: 992px) {
+  header {
+    padding: 156px 0 100px;
+  }
+}
+
+section {
+  padding: 10px 0;
+}
+
+/* Makes container-fluid actually 100% */
+.container-fluid {
+     padding-right: 0; /*15px in bootstrap.css*/
+     padding-left: 0;  /*idem*/
+     margin-right: auto;
+     margin-left: auto;
+}
+
+/* #######################################
+ * Header classes 
+ * ####################################### */
+
+.nav-pills > li > a{ /* Shrinks nav pills */
+    padding-top:3px !important;
+    padding-bottom:3px !important;
+    margin-left: 5px; /* Puts space between pills */
+}
+
+.nav-pills > li > a.active {
+    background-color: #fff !important; /* Sets surrounding area of white */
+    color: #ff5757 !important; /* Sets active pill text to salmon */
+    padding-top:3px !important; /* Shrinks active nav pill */
+    padding-bottom:3px !important;
+}
+
+/* Sets font size of nav-links */
+.nav-link{
+  font-size: 16px;
+}
+
+/* Salmon header color */
+.header-background{
+  background-color:#ff5757;
+}
+
+/* Upper-left logo */
+.navbar-logo{
+  display: block;
+  max-height:40px; /* Controls size */
+  width: auto; /* Keeps aspect ratio */
+  height: auto; /* Keeps aspect ratio */
+  margin-top:-20px; /* Moves closerto top */
+  margin-bottom:-20px; /* Pulls up bottom */
+}
+
+/* Offsets the page the height of the navbar */
+.navbar-offsetter{
+  background-color: darkgrey;
+  width: 100%;
+  height: 55px;
+}
+
+/* Invert navbar color on hover */
+ul.nav a:hover {
+  background-color: #fff !important;
+  color: #ff5757 !important;
+}
+
+.navbar {min-height:16px !important}

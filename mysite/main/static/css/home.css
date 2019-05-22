@@ -1,84 +1,4 @@
 /* #######################################
- * Entire doc attributes 
- * ####################################### */
-@font-face {
-  font-family: tcceb;
-  src: url('/static/fonts/tcceb.ttf')  format("truetype"),
-       local('tcceb');
-}
-
-* {
-    font-family: tcceb, Times, serif;
-}
-
-body{
-  position: relative;
-}
-
-/* Scrolling-nav css */
-header {
-  padding: 154px 0 100px;
-}
-
-@media (min-width: 992px) {
-  header {
-    padding: 156px 0 100px;
-  }
-}
-
-section {
-  padding: 150px 0;
-}
-
-/* Makes container-fluid actually 100% */
-.container-fluid {
-     padding-right: 0; /*15px in bootstrap.css*/
-     padding-left: 0;  /*idem*/
-     margin-right: auto;
-     margin-left: auto;
-}
-
-/* #######################################
- * Header classes 
- * ####################################### */
-
-.nav-pills > li > a.active {
-    background-color: #fff !important;
-    color: #ff5757 !important;
-}
-
-/* Sets font size of nav-links */
-.nav-link{
-  font-size: 18px;
-}
-
-/* Salmon header color */
-.header-background{
-  background-color:#ff5757;
-}
-
-/* Upper-left logo */
-.navbar-logo{
-  height: 45px;
-  width: 130px;
-  margin-bottom: -10px;
-  margin-top: -10px;
-}
-
-/* Offsets the page the height of the navbar */
-.navbar-offsetter{
-  background-color: darkgrey;
-  width: 100%;
-  height: 55px;
-}
-
-/* Invert navbar color on hover */
-ul.nav a:hover {
-  background-color: #fff !important;
-  color: #ff5757 !important;
-}
-
-/* #######################################
  * Partners classes 
  * ####################################### */
 
@@ -330,11 +250,6 @@ header .p-overlay {
   font-size: 32px;
 }
 
-/* Width of input forms */
-.l-form-width{
-  margin: auto;
-}
-
 .l-field{
   width:170px;
   border-style: solid;
@@ -345,7 +260,7 @@ header .p-overlay {
 }
 
 .l-field-2{
-  width:200px;
+  width:300px;
   border-style: solid;
   border-color: white;
   background-color:white;
@@ -354,7 +269,7 @@ header .p-overlay {
 }
 
 .l-form-width-2{
-  width: 330px;
+  margin:auto;
 }
 
 /* Width of submit button */
@@ -467,10 +382,9 @@ header .p-overlay {
 }
 
 .sign-up-box{
-  margin: auto;
   background: #444444;
-  width: 500px;
-  height: 250px;
+  max-width: 400px;
+  height: 350px;
   border-radius: 10px;
 }
 
@@ -478,6 +392,15 @@ header .p-overlay {
   padding-top: 10px;
 }
 
-.names{
+.salmon{
+  color: #ff5757;
+}
 
+.early-access-label{
+  margin-bottom:0px;
+  color: #ffffff; 
+}
+
+.small-spacer{
+  height:10px;
 }

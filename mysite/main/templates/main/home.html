@@ -1,41 +1,65 @@
 {% extends "main/header.html" %}
 {% load staticfiles%}
+
 {% block content %}
 
-<header>
+<head>
+<!-- Marqo specific classes -->
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+</head>
+
+<header> <!-- nammed header simply b/c of css classes I have yet to change -->
   <div id="top" class="p-overlay"></div>
-  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
     <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
-  </video>
-  <div class="container h-100 p-shift-up">
-    <div class="d-flex h-100 text-center align-items-center">
-      <div class="w-100 text-white">
+    </video>
+    <!-- p-shift-up shifts up video the size of the navbar to stop page from being > 100vh
+    h-100 makes elements be in middle of screen */ -->
+
+    <div class="container h-100 p-shift-up">
+      <div class="row h-100 align-items-center">
+
+      <div class="col text-white">
+
         <h1 class="display-1">Shop small,</br>Win big.</h1>
+      </div>
+      <div class="sign-up-box col">
+        <h2 class="top-margin text-white text-center">Get Early Access | <a href="{% url '' %}" class="salmon">Why?</a></h2>
+      <div class="small-spacer"></div>
 
-        <div class="sign-up-box">
-          <h2 class="top-margin">Early Access</h2>
+        <form method="post">
+          {% csrf_token %}
+          <div class="form-row">
+            <div class="col">
+              <p class="early-access-label">First Name:</p>
+              {{ form.first_name }}
+            </div>
+            <div class="col">
+              <p class="early-access-label">Last Name:</p>
+              {{ form.last_name }}
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col">
+              <div class="small-spacer"></div>
+              <p class="early-access-label">Email:</p>
+              {{ form.email }}
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col">
+              <div class="small-spacer"></div>
+              <p class="early-access-label">Questions:</p>
+              {{ form.questions }}
+            </div>
+          </div>
 
-          <form method="post">
-            {% csrf_token %}
-            <div class="l-form-width form-row">
-              <div class="col">
-                {{ form.first_name }}
-              </div>
-              <div class="col">
-                {{ form.last_name }}
-              </div>
+                      <span class="">
+                <button type="submit" class="btn btn-primary l-submit">Submit </button>
+              </span>
             </div>
-            <div class="l-form-width form-row">
-              <div class="">
-                {{ form.email }}
-                  <span class="">
-                  <button type="submit" class="btn btn-primary l-submit">Submit </button>
-                </span>
-              </div>
-            </div>
-          
-            </form>
-        </div>
+          </div>
+        </form>
       </div>
     </div>
     <div class="p-down-arrow-pos">
