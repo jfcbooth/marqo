@@ -27,7 +27,7 @@ class HomeView(TemplateView):
 
       recipients = ['info@marqoapp.com']
 
-      #send_mail(subject, message, sender, recipients)
+      send_mail(subject, message, sender, recipients)
       return HttpResponseRedirect('/received/')
 
       # process the data in form.cleaned_data as required
@@ -37,19 +37,19 @@ class HomeView(TemplateView):
 
 
 def purpose(request):
-	return render(request, 'main/purpose.html')
+  return render(request, 'main/purpose.html')
 
 def team(request):
-	return render(request, 'main/team.html')
+  return render(request, 'main/team.html')
 
 def contact(request):
-	return render(request, 'main/contact.html')
+  return render(request, 'main/contact.html')
 
 def comingSoon(request):
-	return render(request, 'main/coming-soon.html')
+  return render(request, 'main/coming-soon.html')
 
 def test(request):
-	return render(request, 'main/test.html')
+  return render(request, 'main/test.html')
 
 def received(request):
   return render(request, 'main/received.html')
