@@ -11,8 +11,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
 
-    <!-- Marqo specific classes -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <!-- Header specific classes -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}">
 
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
@@ -35,7 +35,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="nav nav-pills ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger text-white" href="#top">Sign Up</a>
+              <a class="nav-link js-scroll-trigger text-white" href="#top">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger text-white" href="#how-it-works">How It Works</a>
@@ -63,6 +63,9 @@
     <!-- Footer -->
     <footer class="py-4 header-background">
       <div class="container">
+        <a class="btn btn-primary" href="{% url 'purpose' %}" role="button">Our Purpose</a>
+        <a class="btn btn-primary" href="{% url 'team' %}" role="button">Meet the Team</a>
+        <a class="btn btn-primary" href="{% url 'contact' %}" role="button">Contact Us</a>
         <p class="m-0 text-center text-white">Marqo Inc. 2019</p>
       </div>
     </footer>
